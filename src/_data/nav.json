@@ -1,0 +1,42 @@
+{
+  "pages": [
+    {
+      "label": "Photos",
+      "url": "/photos"
+    },
+    {
+      "label": "Archive",
+      "url": "/archive"
+    },
+    {
+      "label": "Interests",
+      "url": "/interests"
+    },
+    {
+      "label": "About",
+      "url": "/about"
+    }
+  ],
+  "submenu_pages": [
+    {
+      "label": "Projects",
+      "url": "/projects"
+    },
+    {
+      "label": "Keyboards",
+      "url": "/keyboards"
+    },
+    {
+      "label": "Things I use",
+      "url": "/uses"
+    },
+    {
+      "label": "Favourite games",
+      "url": "/games"
+    },
+    {
+      "label": "Twitter archive",
+      "url": "https://twitter.localghost.dev"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{% extends "base.njk" %}
+{% block content %}
+  <div id="homepage-content" class="content">
+    <h1 id="homepage-heading" class="page-heading">Hi, I'm Zhou Zheyi.</h1>
+    <div id="content-start"></div>
+    <div class="content-inner flow">
+      {{ content | safe }}
+      <h2>
+        Recent Updates
+      </h2>
+      <ol role="list" class="recent-posts">
+        <li>
+          <article class="summary">
+            <a href="/photos">Added warm light by the doorway</a>
+            <time>2025-12-27</time>
+          </article>
+        </li>
+        <li>
+          <article class="summary">
+            <a href="/photos">Mountain mist and quietude</a>
+            <time>2025-12-26</time>
+          </article>
+        </li>
+        <li>
+          <article class="summary">
+            <a href="/archive">On the practice of stopping to observe</a>
+            <time>2025-12-25</time>
+          </article>
+        </li>
+      </ol>
+    </div>
+    <div id="content-end"></div>
+    <div class="flow centered">
+      <div>
+        <p>
+          I'm a member of
+          <a href="https://geekring.net">The Geek Ring</a>!
+        </p>
+        <p>
+          <a title="previous" href="https://geekring.net/site/237/previous">
+            previous site
+          </a>
+          &ndash;
+          <a href="https://geekring.net/site/237/next">
+            next site
+          </a>
+          &ndash;
+          <a href="https://geekring.net/site/237/random">
+            random
+          </a>
+        </p>
+      </div>
+      <p>
+        <a title="previous" href="https://hotlinewebring.club/localghost/previous">
+          &lt;&lt;
+        </a>&nbsp;
+        <a href="https://hotlinewebring.club/">HOTLINE WEBRING</a>&nbsp;
+        <a href="https://hotlinewebring.club/localghost/next" title="next">
+          &gt;&gt;
+        </a>
+      </p>
+    </div>
+  </div>
+{% endblock %}

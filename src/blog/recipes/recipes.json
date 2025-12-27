@@ -1,0 +1,14 @@
+{
+  "layout": "inset-with-link.njk",
+  "hasCustomOGImage": true,
+  "eleventyComputed": {
+    "title": "A good recipe: {{ title | safe }}",
+    "linkText": "{{ source }}."
+  },
+  "type": "recipe",
+  "prompt": "See the original at",
+  "tags": [
+    "recipe"
+  ],
+  "permalink": "/blog/a-good-recipe-{{ title | slugify }}/index.html"
+}

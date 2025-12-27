@@ -1,0 +1,14 @@
+{
+  "layout": "inset-with-link.njk",
+  "hasCustomOGImage": true,
+  "eleventyComputed": {
+    "title": "Listen to this: {{ recordTitle | safe }} by {{ artist | safe }}",
+    "linkText": "{{ artist }} - {{ recordTitle }}"
+  },
+  "type": "music",
+  "prompt": "Listen and buy:",
+  "tags": [
+    "music"
+  ],
+  "permalink": "/blog/listen-to-this-{{ recordTitle | slugify }}-by-{{ artist | slugify }}/index.html"
+}

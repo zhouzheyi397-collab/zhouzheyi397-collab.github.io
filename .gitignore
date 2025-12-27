@@ -1,0 +1,15 @@
+_site/
+yarn-error.log
+.DS_Store
+node_modules/*
+.env
+_cache
+
+.vercel
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

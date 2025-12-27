@@ -1,0 +1,36 @@
+{% set excerpt %}
+{% if excerptText %}
+  {{ excerptText | safe }}
+{% elseif page.excerpt %}
+  {{ page.excerpt | safe }}
+{% else %}
+  {{ metadata.description | safe }}
+{% endif %}
+{% endset %}
+{% set ogImageName %}
+{% if hasCustomOGImage %}
+  og-images/{{ title | slugify }}
+  {% else %}img/og-image{% endif %}
+{% endset %} <meta property="og:title" content="{{ title }}{{ ' - localghost' if not isHome }}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:description" content="{{ excerpt | trim }}"/>
+<meta property="og:url" content="{{ metadata.url }}{{ page.url }}"/>
+<meta property="og:site_name" content="localghost"/>
+<meta property="og:locale" content="en_GB"/>
+<meta name="generator" content="{{eleventy.generator}}"/>
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'none'; manifest-src 'self'; frame-src 'self' https://codepen.io https://*.codepen.io https://*.youtube-nocookie.com; worker-src
+    'self'; object-src 'self'; media-src 'self'; font-src 'self'; connect-src 'self' https://webring.yesterweb.org
+    https://localghost.goatcounter.com https://gc.zgo.at; img-src * data:; style-src 'self' 'unsafe-inline' data:; script-src 'self' https://yesterweb.org
+    https://*.codepen.io https://gc.zgo.at {{ global.baseUrl }} {% if global.isDev %}'unsafe-inline'{% endif %};"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="{{ title }}{{ ' - ' + metadata.title if not isHome }}"/>
+<meta name="twitter:site" content="@type__error"/>
+<meta name="twitter:description" content="{{ excerpt | trim }}"/>
+<meta property="og:image" content="{{ global.baseUrl }}/{{ ogImageName | trim }}.png"/>
+<meta property="twitter:image" content="{{ global.baseUrl }}/{{ ogImageName | trim }}.png"/>
+<link rel="webmention" href="https://webmention.io/{{ metadata.domain }}/webmention"/>
+<link rel="pingback" href="https://webmention.io/{{ metadata.domain }}/xmlrpc"/>
+<link href="https://github.com/sophiekoonin" rel="me">
+{% include "partials/rss-meta.njk" %}
