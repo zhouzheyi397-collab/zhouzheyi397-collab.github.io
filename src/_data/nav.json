@@ -1,6 +1,10 @@
 {
   "pages": [
     {
+      "label": "Home",
+      "url": "/"
+    },
+    {
       "label": "Photos",
       "url": "/photos"
     },
