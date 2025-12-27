@@ -1,13 +1,10 @@
 import md5 from "md5";
 import path from "path";
-import { fileURLToPath } from "url";
 import fs from "fs";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = import.meta.dirname;
 
 const globalData = {
-  baseUrl: process.env.BASE_URL || "https://zhouzheyi397-collab.github.io",
+  baseUrl: process.env.BASE_URL || "/",
   currentYear() {
     return new Date().getFullYear();
   },
