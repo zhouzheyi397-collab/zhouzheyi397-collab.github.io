@@ -74,10 +74,9 @@
 
   .main-nav {
     &:before {
-      background: url(/img/garden-theme/flower-border.png) repeat-x;
       content: "";
       display: block;
-      height: 32px;
+      height: 0;
       position: relative;
       top: -20px;
       z-index: 2;
